@@ -1,0 +1,140 @@
+.main_container{
+    background-color: gainsboro;
+    width: 100%;
+}
+.center{
+    background-color: gainsboro;
+    width: 100%;
+    margin: auto;
+    max-width: 700px;
+}
+.add_new_button{
+    background-color: skyblue;
+    border-radius: 5px;
+    float: right;
+}
+.left_column{
+    width: 400px;
+    background-color: white;
+    float:left;
+    padding: 20px;
+}
+.right_column{
+    background-color: white;
+    padding: 20px;
+}
+
+.last_buttons{
+    float: right;
+}
+
+@media(max-width:500px){
+    .left_column{ width: 100%;}
+    .right_column{width:100%;}
+}
+.item_name{
+    width:100px;
+    float: left;
+}
+.add_buttons{
+    width: 100px;
+    float:left;
+}
+.icon_green_button{
+    background-color: green;
+    border-radius: 10px;
+}
+.icon_red_button{
+    background-color: red;
+    border-radius: 10px;
+}
+.orange_circle_count{
+    background-color: orange;
+    border-radius: 10px;
+}
+.title{
+     border: 3px solid white;
+}
+
+.line{
+    background-color: gainsboro;
+    padding: 10px;
+    border: 3px solid white;
+}
+.delete_button{
+    background-color: red;
+    border-radius: 5px;
+}
+.segment{
+    background-color: gainsboro;
+}
+.sticker{
+    position: fixed;
+    width: 150px;
+    height: 150px;
+    background-color: darkviolet;
+    bottom: -100px;
+    left: 10px;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-radius: 15px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    transition: all 200ms linear;
+}
+.sticker:hover{
+    transform: translateY(-100px)
+}
+.buy{
+    font-size: 40px;
+    font-weight: bold;
+}
+.created{
+    font-size: 25px;
+    margin-top: 30px;
+}
+.name{
+    font-family: cursive;
+    font-size: 30px;
+}
+@media print{
+    .sticker{
+        background: white;
+        color:black;
+        border: 3px solid black;
+    }
+    .buy{
+        display: none;
+    }   
+}
+button{
+    position: relative;
+}
+button::before{
+    content:attr(data-tooltip);
+    position: absolute;
+    top:-25px;
+    left:50%;
+    margin-left: -50px;
+    width: 100px;
+    height:20px;
+    display: block;
+    background-color: blueviolet;
+    color:white;
+    border-radius: 5px;
+    transform: scale(0);
+    transition: all 300ms linear;
+    transform-origin: 50% 100%;
+}
+button:hover::before{
+    
+    transform: scale(1);
+}
+.clearfix::after	{
+visibility:	hidden;
+display:	block;
+content:	"";	
+height:	0;	 
+clear:	both;	
+}
