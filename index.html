@@ -4,21 +4,22 @@
     <meta charset="UTF-8">
     <title>My Page</title>
 
-
+    
     <link rel="stylesheet" type="text/css" href="main.css" />
 </head>
 <body>
-<div class="main_container">
+<div class="main_container clearfix">
     <div class="center">
     <div class="left_column">
         <div class="line clearfix">
         <div class="input_new_item">
-            <input type="text" placeholder=" Назва товару">
+            <input type="text" placeholder=" Назва товару" class="input_item_name">
             <button class="add_new_button">Додати</button>
             </div>
         </div>
-        <div class="line clearfix">
-        <div class="item_name">Помідори</div>
+        <div class="line clearfix item_container">
+            
+        <div class="item_name item_name_not_bought" contenteditable="true">Помідори</div>
         <div class="add_buttons">
             <button class="icon_red_button">
             <i class="minus_icon">-</i>
@@ -30,51 +31,17 @@
             </div>
         <div class="last_buttons">
             <button class="buy_button">Куплено</button>
+            <button class="notbought_button" style="display: none;">Некуплено</button>
             <button class="delete_button" title="Втдалити">
             <i class="remove_icon">X</i>
             </button>
             </div>   
         </div>
-        <div class="line clearfix">
-         <div class="item_name">Печиво</div>
-        <div class="add_buttons">
-            <button class="icon_red_button">
-            <i class="minus_icon">-</i>
-            </button>
-            <span class="count_label">1</span>
-            <button class="icon_green_button" data-tooltip="add 3">
-            <i class="plus_icon">+</i>
-            </button>
-            </div>
-        <div class="last_buttons">
-            <button class="buy_button">Куплено</button>
-            <button class="delete_button" title="Втдалити">
-            <i class="remove_icon">X</i>
-            </button>
-            </div>
-        </div>
-        <div class="line clearfix">
-         <div class="item_name">Сир</div>
-        <div class="add_buttons">
-            <button class="icon_red_button">
-            <i class="minus_icon">-</i>
-            </button>
-            <span class="count_label">1</span>
-            <button class="icon_green_button"  data-tooltip="add 3">
-            <i class="plus_icon">+</i>
-            </button>
-            </div>
-        <div class="last_buttons">
-            <button class="buy_button">Куплено</button>
-            <button class="delete_button" title="Втдалити">
-            <i class="remove_icon">X</i>
-            </button>
-            </div>
-        </div>
-        </div>
-    <div class="right_column">
+    </div>
+<!--
+    <div class="right_column" style="display: none;">
         <div class="segment">
-        <h3>Залишилось</h3>
+            <h3>Залишилось</h3>
         </div>
         <div class="segment">
         <div class="not_bought">
@@ -101,6 +68,7 @@
               </div>
             </div>
         </div>
+-->
     </div>    
     </div>
     <div class="sticker">
@@ -108,5 +76,8 @@
           <div class="created">Created BY</div>
           <div class="name">Alyona</div>
     </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"> </script>
+    <script src="main.js" type="text/javascript"></script>
+    
 </body>
 </html>

@@ -35,7 +35,17 @@
 .item_name{
     width:100px;
     float: left;
+    background-color: inherit;
 }
+
+.item_name_bought{
+    text-decoration: line-through;
+}
+
+.item_name_not_bought{
+    text-decoration: none;
+}
+
 .add_buttons{
     width: 100px;
     float:left;
@@ -98,6 +108,9 @@
     font-family: cursive;
     font-size: 30px;
 }
+.item_container{
+    display: none;
+}
 @media print{
     .sticker{
         background: white;
@@ -137,4 +150,7 @@ display:	block;
 content:	"";	
 height:	0;	 
 clear:	both;	
+}
+.bought{
+    text-decoration: line-through;
 }
